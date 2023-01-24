@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>My website</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="main">
+           <nav>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">car</a></li>
+                    <li><a href="#">accessorie</a></li>
+                    <li><a href="#">help</a></li>
+                </ul>
+            </div>
+           </nav>
+           
+           <div class="information">
+            <div class="overlay"></div>
+            <img src="images/merc.png" class="car">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/car-engine.png">
+                    <div>
+                        <h1>Engine specs</h1>
+                        <p>4.0L Twin Turbo V8 603HP 900Nm</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/dimensions.png">
+                    <div>
+                        <h1>dimensions</h1>
+                        <p>Length: 5027mm<br />
+                            Width: 1913mm<br />
+                            Hight: 1412mm<br />
+                            Wheelbase: 2945mm<br />
+                            Ground Clearance: 122mm
+                        </p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/automatic-transmission.png">
+                    <div>
+                        <h1>transmission</h1>
+                        <p>Automatic (TC) - 9 Gears, Paddle Shift,<br />
+                             Sport Mode</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/options.png">
+                    <div>
+                        <h1>options</h1>
+                        <p>Independent suspension, Multi-link<br />
+                           'Airmatic' air springs 360 camera<br />
+                           front/rear AC All electronic commands
+                        </p>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+           <div class="controles">
+            <img src="images/upArrow.png" id="upArrow">
+            <h3>Features</h3>
+            <img src="images/downArrow.png" id="downArrow">
+           </div>
+
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upArrow = document.getElementById("upArrow");
+            var downArrow = document.getElementById("downArrow");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upArrow.onclick = function()
+            {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            downArrow.onclick = function()
+            {
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+
+    </body>
+</html>
